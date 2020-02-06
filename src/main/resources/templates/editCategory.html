@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="default.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<nav th:insert="~{/nav.html :: nav}"> </nav>
+<div class="wrapper">
+    <div class="box table-info-word table-info-back">
+        <form th:action="@{'/editCategory?id_category='+${category.id}}" method="post">
+            Category name : <input type="text" name="name" th:value="${category.name}">
+            <button>Edit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

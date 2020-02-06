@@ -1,0 +1,36 @@
+* {box-sizing: border-box; margin: 0;}
+.widget {
+    position: absolute;
+    padding: 20px 30px;
+    background: #212121;
+    font-family: 'Roboto', sans-serif;
+}
+.widget-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #b4b4b4;
+    font-size: 30px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    border-left: 2px solid #ff91a9;
+}
+.widget-list {
+    padding: 0;
+    list-style: none;
+}
+.widget-list a:before {
+    content: "\2020";
+    margin-right: 14px;
+}
+.widget-list a {
+    font-size: 20px;
+    text-decoration: none;
+    outline: none;
+    display: block;
+    padding: 6px 0;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #b4b4b4;
+    transition: .3s linear;
+}
+.widget-list a:hover {color: #ff91a9;}

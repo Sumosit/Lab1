@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses</title>
+    <link href="default.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<nav th:insert="~{/nav.html :: nav}"></nav>
+<div class="wrapper">
+    <div class="box table-info-word table-info-back">
+        <form method="post" action="/addCourse">
+            Course name <input type = "text" name = "name">
+            Course credits <input type="text" name = "credits">
+            <button>Add</button>
+        </form>
+    </div>
+    <div style="border: 2px solid #ff91a9"></div>
+    <div class="box table-info-word table-info-back">
+        <table cellpadding="20">
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Credits</td>
+                <td></td>
+            </tr>
+            <tr th:each="item : ${courses}">
+                <td th:text="${item.id}"></td>
+                <td th:text="${item.name}"></td>
+                <td th:text="${item.credits}"></td>
+                <td>
+                    <a class="nolink" th:href="@{'/editCourse?id='+${item.id}}">Edit</a>
+                </td>
+            </tr>
+    </div>
+</body>
+</html>

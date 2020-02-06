@@ -1,0 +1,45 @@
+@font-face {
+    font-family: PathwayGothicOne-Regular;
+    src: url("static/PathwayGothicOne-Regular.ttf");
+}
+body {
+    background: #212121;
+}
+.wrapper {
+    width: 60%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+}
+.wrapper {;
+    border: 3px solid #ff91a9;
+    border-radius: 5px;
+    background-color: #F5F5DC;
+}
+.box {
+    padding: 20px;
+}
+* {
+    box-sizing: border-box;
+}
+.table-info-back {
+    background-color: #393939;
+}
+.table-info-word {
+    color: #b4b4b4;
+    font-family: "Franklin Gothic Book", sans-serif;
+    font-size: 20px;
+}
+.add_form-back {
+    background-color: #b1b1b1;
+}
+.add-form-word {
+    color: #000000;
+    font-family: "Franklin Gothic Book", sans-serif;
+    font-size: 20px;
+}
+.nolink {
+    text-decoration: none;
+    color: #ff91a9;
+}

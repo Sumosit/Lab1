@@ -1,0 +1,33 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>
+            FIRST SPRING BOOT
+        </h1>
+        <form action="/add" method="post">
+            NAME : <input type="text" name="name">
+            PRICE : <input type="number" name="price">
+            <button>ADD</button>
+        </form>
+
+        <table cellpadding="20">
+            <tr>
+                <td>ID</td>
+                <td>NAME</td>
+                <td>PRICE</td>
+                <td>DETAILS</td>
+            </tr>
+            <tr th:each = "item : ${itemler}">
+                <td th:text = "${item.id}"></td>
+                <td th:text = "${item.name}"></td>
+                <td th:text = "${item.price}"></td>
+                <td>
+                    <a th:href = "@{'/details/'+${item.id}}">DETAILS</a>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

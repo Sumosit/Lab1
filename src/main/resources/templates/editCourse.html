@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="default.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<nav th:insert="~{/nav.html :: nav}"> </nav>
+<div class="wrapper">
+    <div class="box table-info-word table-info-back">
+        <form th:action="@{'/editCourse?id='+${course.id}}" method="post">
+            Course name : <input type="text" name="name" th:value="${course.name}">
+            Course credits : <input type="text" name="credits" th:value="${course.credits}">
+            <button>Edit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

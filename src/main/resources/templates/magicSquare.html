@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>The Magic Square</title>
+    <link href="default.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<nav th:insert="~{/nav.html :: nav}"></nav>
+<div class="wrapper">
+    <div class="box table-info-word table-info-back">
+        <form action="/encodemagicsquare" method="get">
+            Text <input type="text" name="magic">
+            <button>Convert</button>
+        </form>
+    </div>
+    <div class="box table-info-word table-info-back">
+        <div th:each="a1 : ${a1}" style="display: inline-block;">
+            <span th:text="${a1}"></span>
+        </div>
+        <span th:text="${a2}"></span>
+        <span th:text="${a3}"></span>
+        <span th:text="${a4}"></span>
+<!--        <table cellpadding="20">-->
+<!--            <tr>-->
+<!--                <td th:text="${a[0]}"></td>-->
+<!--                <td th:text="${a[1]}"></td>-->
+<!--                <td th:text="${a[2]}"></td>-->
+<!--                <td th:text="${a[3]}"></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td th:text="${a[4]}"></td>-->
+<!--                <td th:text="${a[5]}"></td>-->
+<!--                <td th:text="${a[6]}"></td>-->
+<!--                <td th:text="${a[7]}"></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td th:text="${a[8]}"></td>-->
+<!--                <td th:text="${a[9]}"></td>-->
+<!--                <td th:text="${a[10]}"></td>-->
+<!--                <td th:text="${a[11]}"></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td th:text="${a[12]}"></td>-->
+<!--                <td th:text="${a[13]}"></td>-->
+<!--                <td th:text="${a[14]}"></td>-->
+<!--                <td th:text="${a[15]}"></td>-->
+<!--            </tr>-->
+<!--        </table>-->
+    </div>
+</body>
+</html>
